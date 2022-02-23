@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .beer {
+      text-transform: uppercase;
+      font-size: 35px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .light1 {
+      animation-name: light-blinker;
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
+      animation-duration: 1s;
+    }
+
+    @keyframes light-blinker {
+      from {
+        opacity: 1.0;
+      }
+
+      to {
+        opacity: 0.0;
+      }
+    }
+  </style>
+  <title>SVG картинка
+  </title>
+</head>
+
+<body>
+  <svg width="1000" height="600" viewBox="-250 -200 500 500" xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+    <g class="truck" transform="scale(1)">
+      <!-- Тент-->
+      <rect x="20" y="-70" width="200" height="200" fill="orange" rx="10" stroke="lightgrey" stroke-width="10" />
+      <text x="78" y="20" class="beer">TRUCK</text>
+      <image href="./1554455.png" x="172" y="-8" width="30" height="30">
+      </image>
+      <image href="./1554455.png" x="45" y="-8" width="30" height="30">
+      </image>
+      <!-- Кузов -->
+      <rect x="10" y="80" width="340" height="80" fill="grey" rx="30" />
+
+      <g>
+        <!-- Кабина стенка задняя -->
+        <line x1="230" y1="-20" x2="230" y2="100" stroke="grey" stroke-width="10" />
+
+        <!-- Кабина перед -->
+        <line x1="340" y1="43" x2="340" y2="90" stroke="grey" stroke-width="10" stroke-linecap="round" />
+        <line x1="300" y1="-20" x2="225" y2="-20" stroke="grey" stroke-width="10" />
+        <line x1="340" y1="42" x2="300" y2="-20" stroke="grey" stroke-width="10" stroke-linecap="round" />
+        <path stroke="turquoise" stroke-width="1" fill="turquoise" d="M 340,42 L 300,-20
+       L 300,42 z" />
+        <line x1="250" y1="45" x2="340" y2="45" stroke="grey" stroke-width="10" fill="grey" />
+        <line x1="250" y1="-20" x2="250" y2="80" stroke="grey" stroke-width="10" />
+        <line x1="250" y1="-20" x2="250" y2="80" stroke="grey" stroke-width="10" />
+        <line x1="300" y1="-20" x2="300" y2="80" stroke="grey" stroke-width="10" />
+        <line x1="270" y1="60" x2="290" y2="60" stroke="grey" stroke-width="10" />
+
+        <polygon points="255,-15 255,40 295,40 295,-15" fill="turquoise"></polygon>
+      </g>
+
+      <g>
+        <!-- Задний бампер -->
+        <rect x="5" y="105" width="20" height="40" fill="#2F4F4F" rx="10" />
+
+
+        <!-- Передний бампер -->
+        <rect id="bumper" x="340" y="130" width="20" height="10" fill="#2F4F5F" rx="5" stroke-width="5" />
+
+        <rect x="340" y="110" width="20" height="10" fill="#2F4F5F" rx="5" stroke-width="5" />
+        <rect x="350" y="95" width="20" height="60" fill="#2F4F4F" rx="10" />
+
+      </g>
+
+      <!-- Два левых колеса -->
+      <g>
+        <circle r="35px" fill="#222" stroke="white" stroke-width="7" cx="80" cy="140" />
+        <circle r="20px" fill="#2F4F5F" cx="80" cy="140" />
+        <rect x="70" y="138" width="20" height="5" fill="white" rx="3" stroke-width="3" />
+        <rect x="77" y="130" width="5" height="20" fill="white" rx="3" stroke-width="3" />
+      </g>
+      <g>
+        <circle r="35px" fill="#222" stroke="white" stroke-width="7" cx="150" cy="140" />
+        <circle r="20px" fill="#2F4F5F" cx="150" cy="140" />
+        <rect x="140" y="139" width="20" height="5" fill="white" rx="3" stroke-width="3" />
+        <rect x="147.5" y="131" width="5" height="20" fill="white" rx="3" stroke-width="3" />
+      </g>
+
+      <!-- Правое колесо-->
+      <g>
+        <circle r="35px" fill="#222" stroke="white" stroke-width="7" cx="270" cy="140" />
+        <circle r="20px" fill="#2F4F5F" cx="270" cy="140" />
+        <rect x="260" y="139" width="20" height="5" fill="white" rx="3" stroke-width="3" />
+        <rect x="267.5" y="131" width="5" height="20" fill="white" rx="3" stroke-width="3" />
+      </g>
+
+      <g>
+        <!-- Передний поворотник -->
+        <rect class="light1" x="325" y="84" width="20" height="10" fill="gold" rx="5" stroke-width="5" />
+
+        <!-- Задний поворотник -->
+        <ellipse cx="25" cy="90" rx="10" ry="5" fill="red" />
+        <symbol id="my-icon" viewBox="0 0 30 30">
+
+        </symbol>
+
+        <use xlink:href="#my-icon" x="100" y="300" />
+      </g>
+    </g>
+  </svg>
+</body>
+
+</html>
